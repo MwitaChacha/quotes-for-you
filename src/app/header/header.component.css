@@ -14,3 +14,8 @@ p {
     font-family: 'Roboto';
     font-size: smaller;
 }
+
+.quote-author {
+    font-family: 'Ephesis';
+    font-size: larger;
+}
