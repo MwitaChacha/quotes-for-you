@@ -1,0 +1,19 @@
+
+.quote-section {
+    font-family: 'Roboto';
+}
+
+label {
+    padding: 1%;
+}
+
+.btn {
+    background-color: #4A403A;
+    margin-top: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #A45D5D;
+    transition: 200ms;
+}
