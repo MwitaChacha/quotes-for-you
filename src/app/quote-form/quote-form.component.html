@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class=" col-4 quote-section">
+    <div class=" col-lg-4 col-md-6 col-sm-12 quote-section">
       <form #f="ngForm" ngSubmit="onSubmit()">
         <label for="">Quote</label>
         <input class="form-control" name="quote" [(ngModel)]="quoteMessage" type="text" placeholder="">
@@ -8,7 +8,7 @@
         <input class="form-control" name="author" [(ngModel)]="quoteAuthor" type="text">
         <label for="">Your Name</label>
         <input class="form-control" name="user" [(ngModel)]="quoteUser" type="text">
-        <button (click)="onSubmit()" class="btn btn-primary btn-lg">Submit Your Quote</button>
+        <button (click)="onSubmit()" class="btn submit-btn btn-primary btn-lg">Submit Your Quote</button>
       </form>
       <div class=" return-section">
         <p class="return-text">Quote: <span>{{quoteMessage}}</span></p>
@@ -16,16 +16,22 @@
         <p class="return-text">Your Name: <span>{{quoteUser}}</span></p>
       </div>
     </div>
-    <div *ngFor='let quote of quotes' class="col-8">
-      <div class="card text-center" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Quote: {{quote.quoteMessage}} <span></span></h5>
-          <p class="card-text">Author: {{quote.quoteAuthor}} </p>
-          <p class="card-text">Submitted by: {{quote.quoteUser}} </p>
-          <button class="btn btn-primary" type="submit" >Like</button>
-          <button class="btn btn-primary" type="submit" >Dislike</button>
+    <div class="col-lg-8 col-md-6 col-sm-12 display-quote">
+      <div class="row">
+        <div class="col-sm-6" *ngFor='let quote of quotes'>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> "{{quote.quoteMessage}}" <span></span></h5>
+              <p class="card-text">Author: {{quote.quoteAuthor}} </p>
+              <p class="card-text">Submitted by: {{quote.quoteUser}} </p>
+              <button class="btn btn-primary m-1 like-button" type="submit">Like</button>
+              <button class="btn btn-primary m-1 dislike-button" type="submit">Dislike</button>
+              <button class="btn btn-primary m-1 delete-button" type="submit">Delete Quote</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-</div>

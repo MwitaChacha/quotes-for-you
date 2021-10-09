@@ -3,6 +3,10 @@
     font-family: 'Roboto';
 }
 
+input {
+    width: 70%;
+}
+
 label {
     padding: 1%;
 }
@@ -13,7 +17,11 @@ label {
     border: none;
 }
 
-.btn:hover {
+.submit-btn {
+    width: 70%;
+}
+
+.submit-btn:hover {
     background-color: #A45D5D;
     transition: 200ms;
 }
@@ -28,6 +36,31 @@ label {
 }
 
 .container-fluid {
-    background-color: #C7BEA2;
     padding: 2%;
+}
+
+.display-quote {
+    font-family: 'Roboto';
+    font-size: smaller;
+    
+}
+
+.card {
+    background-color: #CEE5D0;
+    border: none;
+    margin: 1%;
+}
+
+.delete-button {
+    background-color: #D57E7E;
+}
+
+.like-button:hover {
+    background-color: #3A6351;
+    transition: 200ms;
+}
+
+.dislike-button:hover {
+    background-color: #D57E7E;
+    transition: 200ms;
 }
