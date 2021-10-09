@@ -21,3 +21,13 @@ label {
 .return-section {
     font-family: 'Roboto';
 }
+
+.return-text {
+    font-family: 'Playfair';
+    
+}
+
+.container-fluid {
+    background-color: #C7BEA2;
+    padding: 2%;
+}

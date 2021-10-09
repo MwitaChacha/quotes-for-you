@@ -1,17 +1,23 @@
-<div class="quote-section">
-<form #f="ngForm">
-    <label for="">Quote</label>
-    <input class="form-control" name="quote" [(ngModel)]="quoteMessage" type="text" placeholder="">
-    <label for="">Author</label>
-    <input class="form-control" name="author" [(ngModel)]="quoteAuthor" type="text">
-    <label for="">Your Name</label>
-    <input class="form-control" name="user" [(ngModel)]="quoteUser" type="text">
-    <button class="btn btn-primary btn-lg">Submit Your Quote</button>
-</form>
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-4 quote-section">
+      <form #f="ngForm" ngSubmit="onSubmit()">
+        <label for="">Quote</label>
+        <input class="form-control" name="quote" [(ngModel)]="quoteMessage" type="text" placeholder="">
+        <label for="">Author</label>
+        <input class="form-control" name="author" [(ngModel)]="quoteAuthor" type="text">
+        <label for="">Your Name</label>
+        <input class="form-control" name="user" [(ngModel)]="quoteUser" type="text">
+        <button class="btn btn-primary btn-lg">Submit Your Quote</button>
+      </form>
+      <div class=" return-section">
+        <p class="return-text">Quote: <span>{{quoteMessage}}</span></p>
+        <p class="return-text">Author: <span>{{quoteAuthor}}</span></p>
+        <p class="return-text">Your Name: <span>{{quoteUser}}</span></p>
+      </div>
+    </div>
+    <div class="col-8">
 
-<div class="return-section">
-    <p>Quote: <span>{{quoteMessage}}</span></p>
-    <p>Author: <span>{{quoteAuthor}}</span></p>
-    <p>Your Name: <span>{{quoteUser}}</span></p>
+    </div>
+  </div>
 </div>
