@@ -8,7 +8,7 @@
         <input class="form-control" name="author" [(ngModel)]="quoteAuthor" type="text">
         <label for="">Your Name</label>
         <input class="form-control" name="user" [(ngModel)]="quoteUser" type="text">
-        <button class="btn btn-primary btn-lg">Submit Your Quote</button>
+        <button (click)="onSubmit()" class="btn btn-primary btn-lg">Submit Your Quote</button>
       </form>
       <div class=" return-section">
         <p class="return-text">Quote: <span>{{quoteMessage}}</span></p>
@@ -16,8 +16,16 @@
         <p class="return-text">Your Name: <span>{{quoteUser}}</span></p>
       </div>
     </div>
-    <div class="col-8">
-
+    <div *ngFor='let quote of quotes' class="col-8">
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Quote: {{quote.quoteMessage}} <span></span></h5>
+          <p class="card-text">Author: {{quote.quoteAuthor}} </p>
+          <p class="card-text">Submitted by: {{quote.quoteUser}} </p>
+          <button class="btn btn-primary" type="submit" >Like</button>
+          <button class="btn btn-primary" type="submit" >Dislike</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
