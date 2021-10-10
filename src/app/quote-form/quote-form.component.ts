@@ -1,5 +1,10 @@
-import { QuoteMessage } from './../quote-message';
-import { Component, OnInit } from '@angular/core';
+import {
+  QuoteMessage
+} from './../quote-message';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 
 @Component({
@@ -11,10 +16,9 @@ export class QuoteFormComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   quotes: QuoteMessage[] = [];
 
@@ -22,15 +26,23 @@ export class QuoteFormComponent implements OnInit {
   quoteAuthor!: string;
   quoteUser!: string;
   newQuote: any;
-  likes!: number;
+  likes: number = 0;
+  dislikes: number = 0;
 
   onSubmit() {
     let published = new Date();
-     this.newQuote = new QuoteMessage(0, this.quoteMessage, this.quoteAuthor, this.quoteUser, 0, 0, published);
-     this.quotes.push(this.newQuote);
+    this.newQuote = new QuoteMessage(0, this.quoteMessage, this.quoteAuthor, this.quoteUser, this.likes, this.dislikes, published);
+    this.quotes.push(this.newQuote);
   }
 
   quoteDelete() {
 
+  }
+  onLike() {
+    this.likes++;
+  }
+
+  onDislike() {
+    this.dislikes++;
   }
 }
