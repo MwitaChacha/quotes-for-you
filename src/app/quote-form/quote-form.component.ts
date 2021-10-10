@@ -14,12 +14,6 @@ import {
 })
 export class QuoteFormComponent implements OnInit {
 
-
-
-  constructor() {}
-
-  ngOnInit(): void {}
-
   quotes: QuoteMessage[] = [];
 
   quoteMessage!: string;
@@ -29,15 +23,22 @@ export class QuoteFormComponent implements OnInit {
   likes: number = 0;
   dislikes: number = 0;
 
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+
   onSubmit() {
     let published = new Date();
     this.newQuote = new QuoteMessage(0, this.quoteMessage, this.quoteAuthor, this.quoteUser, this.likes, this.dislikes, published);
     this.quotes.push(this.newQuote);
   }
 
-  quoteDelete() {
-
+  onDelete(index: number): void {
+    this.quotes.splice(index, 1)
   }
+
   onLike(index: number): void {
     const currentList = this.quotes;
     const subjectQuote = currentList[index];
