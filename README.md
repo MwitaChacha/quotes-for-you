@@ -5,7 +5,7 @@ Here is the website link: <https://mwitachacha.github.io/quotes-for-you/>
 
 ## Description
 
-QuotesForYou is a fun website application that enables a user to input their favourite quotes. The user is also able able to upvote, downvote and delete any quote to their liking. The quote details are then displayed on a card. This project is built using HTML, CSS, Bootstrap and Angular.
+QuotesForYou is a fun website application that enables a user to input their favourite quotes. The user is also able to upvote, downvote and delete any quote to their liking. The quote details are then displayed on a card. This project is built using HTML, CSS, Bootstrap and Angular.
 
 ## Author
 
