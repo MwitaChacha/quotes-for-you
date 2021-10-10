@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { TimeAgoPipe } from './time-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
