@@ -18,16 +18,18 @@
     </div>
     <div class="col-lg-8 col-md-6 col-sm-12 display-quote">
       <div class="row">
-        <div class="col-sm-6" *ngFor='let quote of quotes'>
+        <div class="col-sm-6" *ngFor='let quote of quotes; let i = index'>
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"> "{{quote.quoteMessage}}" <span></span></h5>
-              <p class="card-text">Author: {{quote.quoteAuthor}} </p>
-              <p class="card-text">Submitted by: {{quote.quoteUser}} </p>
+              <h5 class="card-title"><span> "{{quote.quoteMessage}}" </span></h5>
+              <p class="card-text">Author:<span> {{quote.quoteAuthor}} </span></p>
+              <p class="card-text">Submitted by: <span> {{quote.quoteUser}} </span></p>
+              <p>Published on: {{quote.published}}</p>
               <button class="btn btn-primary m-1 like-button" type="submit">Like</button>
               <button class="btn btn-primary m-1 dislike-button" type="submit">Dislike</button>
-              <button class="btn btn-primary m-1 delete-button" type="submit">Delete Quote</button>
+              <button (click)="quoteDelete()" class="btn btn-primary m-1 delete-button" type="submit">Delete
+                Quote</button>
             </div>
           </div>
 

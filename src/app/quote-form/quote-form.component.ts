@@ -22,10 +22,15 @@ export class QuoteFormComponent implements OnInit {
   quoteAuthor!: string;
   quoteUser!: string;
   newQuote: any;
+  likes!: number;
 
   onSubmit() {
-     this.newQuote = new QuoteMessage(0, this.quoteMessage, this.quoteAuthor, this.quoteUser);
+    let published = new Date();
+     this.newQuote = new QuoteMessage(0, this.quoteMessage, this.quoteAuthor, this.quoteUser, 0, 0, published);
      this.quotes.push(this.newQuote);
   }
 
+  quoteDelete() {
+
+  }
 }
