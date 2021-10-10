@@ -1,7 +1,7 @@
 # QuotesForYou
 
 Welcome to the QuotesForYou website application!
-Here is the website link: https://mwitachacha.github.io/quotes-for-you/
+Here is the website link: <https://mwitachacha.github.io/quotes-for-you/>
 
 ## Description
 
