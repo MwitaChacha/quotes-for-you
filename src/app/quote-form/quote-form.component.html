@@ -26,8 +26,8 @@
               <p class="card-text">Author:<span> {{quote.quoteAuthor}} </span></p>
               <p class="card-text">Submitted by: <span> {{quote.quoteUser}} </span></p>
               <p>Published on: {{quote.published|date}}</p>
-              <button (click)="onLike()" class="btn btn-primary m-1 like-button" type="submit">Likes {{quote.likes}}</button>
-              <button (click)="onDislike()" class="btn btn-primary m-1 dislike-button" type="submit">Dislikes {{quote.dislikes}}</button>
+              <button (click)="onLike(i)" class="btn btn-primary m-1 like-button" type="submit">Likes {{quote.likes}}</button>
+              <button (click)="onDislike(i)" class="btn btn-primary m-1 dislike-button" type="submit">Dislikes {{quote.dislikes}}</button>
               <button (click)="quoteDelete()" class="btn btn-primary m-1 delete-button" type="submit">Delete
                 Quote</button>
             </div>

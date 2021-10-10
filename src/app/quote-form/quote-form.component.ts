@@ -38,11 +38,15 @@ export class QuoteFormComponent implements OnInit {
   quoteDelete() {
 
   }
-  onLike() {
-    this.likes++;
+  onLike(index: number): void {
+    const currentList = this.quotes;
+    const subjectQuote = currentList[index];
+    subjectQuote.likes = subjectQuote.likes +  1;
   }
 
-  onDislike() {
-    this.dislikes++;
+  onDislike(index: number): void {
+    const currentList = this.quotes;
+    const subjectQuote = currentList[index];
+    subjectQuote.dislikes = subjectQuote.dislikes +  1;
   }
 }
