@@ -1,3 +1,4 @@
+<!-- Quote Form Structure -->
 <div class="container-fluid">
   <div class="row">
     <div class=" col-lg-4 col-md-6 col-sm-12 quote-section">
@@ -8,6 +9,7 @@
         <input class="form-control" name="author" [(ngModel)]="quoteAuthor" type="text">
         <label for="">Your Name</label>
         <input class="form-control" name="user" [(ngModel)]="quoteUser" type="text">
+        <!-- ngSubmit did not work, therefore opted to use click -->
         <button (click)="onSubmit()" class="btn submit-btn btn-primary btn-lg">Submit Your Quote</button>
       </form>
       <div class=" return-section">
@@ -16,18 +18,21 @@
         <p class="return-text">Your Name: <span>{{quoteUser}}</span></p>
       </div>
     </div>
+    <!-- Section where submitted quotes will be displayed -->
     <div class="col-lg-8 col-md-6 col-sm-12 display-quote">
       <div class="row">
         <div class="col-sm-6" *ngFor='let quote of quotes; let i = index'>
-
+          <!-- Card that will display quotes -->
           <div class="card">
             <div class="card-body">
               <h5 class="card-title"><span> "{{quote.quoteMessage}}" </span></h5>
               <p class="card-text">Author:<span> {{quote.quoteAuthor}} </span></p>
               <p class="card-text">Submitted by: <span> {{quote.quoteUser}} </span></p>
               <p>Published on: {{quote.published|date}}</p>
-              <button (click)="onLike(i)" class="btn btn-primary m-1 like-button" type="button">Likes {{quote.likes}}</button>
-              <button (click)="onDislike(i)" class="btn btn-primary m-1 dislike-button" type="button">Dislikes {{quote.dislikes}}</button>
+              <button (click)="onLike(i)" class="btn btn-primary m-1 like-button" type="button">Likes
+                {{quote.likes}}</button>
+              <button (click)="onDislike(i)" class="btn btn-primary m-1 dislike-button" type="button">Dislikes
+                {{quote.dislikes}}</button>
               <button (click)="onDelete(i)" class="btn btn-primary m-1 delete-button" type="button">Delete
                 Quote</button>
             </div>
