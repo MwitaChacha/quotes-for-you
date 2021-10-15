@@ -1,6 +1,6 @@
 import {
   QuoteMessage
-} from './../quote-message';
+} from '../../quote-message';
 import {
   Component,
   OnInit

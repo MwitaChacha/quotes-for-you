@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { HeaderComponent } from './components/header/header.component';
+import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { TimeAgoPipe } from './time-ago.pipe';
 
 @NgModule({
