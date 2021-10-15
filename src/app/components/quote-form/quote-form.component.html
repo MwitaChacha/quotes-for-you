@@ -28,13 +28,14 @@
               <h5 class="card-title"><span> "{{quote.quoteMessage}}" </span></h5>
               <p class="card-text">Author:<span> {{quote.quoteAuthor}} </span></p>
               <p class="card-text">Submitted by: <span> {{quote.quoteUser}} </span></p>
-              <p>Published on: {{quote.published|date}}</p>
+              <p>Published {{quote.published|timeAgo}}</p>
               <button (click)="onLike(i)" class="btn btn-primary m-1 like-button" type="button">Likes
                 {{quote.likes}}</button>
               <button (click)="onDislike(i)" class="btn btn-primary m-1 dislike-button" type="button">Dislikes
                 {{quote.dislikes}}</button>
               <button (click)="onDelete(i)" class="btn btn-primary m-1 delete-button" type="button">Delete
                 Quote</button>
+                <p class="text-success" *ngIf="isMostLiked(i)">Highest liked quote!</p>
             </div>
           </div>
 

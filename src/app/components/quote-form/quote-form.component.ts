@@ -51,4 +51,15 @@ export class QuoteFormComponent implements OnInit {
     const subjectQuote = currentList[index];
     subjectQuote.dislikes = subjectQuote.dislikes +  1;
   }
+
+  isMostLiked(index: number): boolean {
+    const currentList = this.quotes;
+    const subjectQuote = currentList[index];
+    let quotesComparisons: boolean[] = [];
+    currentList.forEach(item => {
+      const value = subjectQuote.likes >= item.likes;
+      quotesComparisons.push(value);
+    })
+    return quotesComparisons.every(item => item === true);
+  }
 }
